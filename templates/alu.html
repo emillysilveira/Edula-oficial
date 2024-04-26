@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="rgg.css">
+    <title>Olá caro aluno!</title>
+</head>
+<body>
+
+    <div class="navbar">
+        <h2>Edula</h2>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="">Avaliação diágnostica</a></li>
+            <li><a href="#">Material de apoio</a></li>
+            <li><a href="http://127.0.0.1:5000/ia">Consultar a IA</a></li>
+            <li><a href="#">Créditos</a></li>
+        </ul>
+        <button class="hire-btn">Clique aqui</button>
+    </div>
+
+    <div class="main">
+        <h4>Seja bem vindo ao <span>Edula!</span> 👋</h4>
+        <p class="title">Aprenda com mais facilidade através do Edula.
+        </p>
+        <p class="subtitle"> O Edula vai ajudar você a ter um melhor desempenho na escola.</p>
+        <img src="imagem/logo.png">
+    </div>
+
+    <div class="guarantee">
+        <div class="item">
+            <div class="icon">
+                <i class='bx bx-book-bookmark' ></i>
+            </div>
+            <div class="info">
+                <p>Avaliações diágnosticas</p>
+            </div>
+            <i class='bx bx-chevron-right' ></i>
+        </div>
+        <div class="item">
+            <div class="icon">
+                <i class='bx bxs-package' ></i>
+            </div>
+            <div class="info">
+                <p>Material de apoio</p>
+            </div>
+            <i class='bx bx-chevron-right' ></i>
+        </div>
+        <div class="item">
+            <div class="icon">
+                <i class='bx bx-shape-triangle' ></i>
+            </div>
+            <div class="info">
+                <p>Consultar a IA</p>
+            </div>
+            <i class='bx bx-chevron-right'></i>
+        </div>
+    </div>
+
+    <h5 class="seprator">Eu sou Edula</h5>
+
+    <div class="about">
+        <img src="imagem.png">
+        <div class="info">
+            <h3>Olhe um pouco.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Dolores cupiditate 
+                mollitia illum voluptatem blanditiis ratione tempore, 
+                nulla aut illo saepe iusto, 
+                labore ducimus iste error autem 
+                distinctio beatae amet hic.
+                Lorem ipsum dolor sit amet, 
+                consectetur adipisicing elit. 
+                Dolores cupiditate mollitia 
+                illum voluptatem 
+                blanditiis ratione tempore, 
+                nulla aut illo saepe iusto, labore ducimus iste error autem 
+                distinctio beatae amet hic.
+                Lorem ipsum dolor 
+                sit amet, consectetur adipisicing elit. 
+                Dolores cupiditate 
+                mollitia illum voluptatem blanditiis ratione tempore, 
+                nulla aut illo saepe 
+                iusto, labore ducimus iste error autem 
+                distinctio beatae amet hic.</p>
+        </div>
+    </div> 
+
+    <h5 class="seprator">Referencias</h5>
+
+    <footer>
+        <div class="start">
+            <h3>Dica bônus</h3>
+            <p>você pode estudar mais com o Edula, pois iremos desenvolve-lo 
+                mais aprimoradamente para que os alunos e professores
+                experimentem do bom e do melhor.
+            </p>
+            <button>Obrigado.</button>
+        </div>
+        <div class="cols">
+            <div class="about-col">
+                <h3>EDULA.com</h3>
+                <p>O site de ensino-aprendizagem</p>
+            </div>
+
+            <div class="link-col">
+                <h4>Referencias</h4>
+                <a href="#">Início</a>
+                <a href="#">Avaliações diágnosticas</a>
+                <a href="#">Materiais de apoio</a>
+                <a href="/ia">Consultar a IA</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <div class="link-col">
+                <h4>Mídia social</h4>
+                <a href="#">Instagram</a>
+                <a href="#">LinkeDin</a>
+                <a href="#">Dribble</a>
+                <a href="#">Youtube</a>
+                <a href="#">Github</a>
+            </div>
+
+            <div class="news-col">
+                <h4>Notificações</h4>
+                <p>Coloque seu email para receber informações.</p>
+
+                <form>
+                    <input type="email" placeholder="Digite seu indereço de email">
+                    <button><i class='bx bxl-telegram'></i></button>
+                    
+                </form>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script>
+        // Adicionar evento de clique ao botão "Consultar a IA"
+        document.querySelector(".guarantee .item:nth-child(3)").addEventListener("click", function() {
+            window.location.href = "ia.html"; // Redirecionar para a rota /ia
+        });
+    </script>
+
+</body>
+
+</html>

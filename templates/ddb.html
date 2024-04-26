@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="img.css">
+    <link rel="icon" href="https://th.bing.com/th/id/R.04e33237cd1126fb72a0e03acedb80fa?rik=dOuMfI7uH1UPsw&riu=http%3a%2f%2fedu.szf.at%2fimages%2fedu4me.png&ehk=rUkmZNqWfePUDO1MfO%2bPEpzOb4ky6xB5jQnhtGNaSTo%3d&risl=&pid=ImgRaw&r=0">
+    <title>Login</title>
+</head>
+<body>
+<main>
+    <div class="main-container">
+        <div class="left-content">
+            <h1>Descubra coisas incríveis em nossa plataforma!</h1>
+            <figure class="vector-img">
+                <img src="image.svg" alt="Vetor-Login">
+            </figure>
+        </div>
+        <div class="right-content">
+            <div class="card card-color">
+                <div class="title">
+                    <h2>Selecione seu tipo de usuário</h2>
+                </div>
+                <div class="user-selection">
+                    <button id="aluno">Aluno</button>
+                    <button id="professor">Professor</button>
+                </div>
+            </div>
+            <div class="card card-color" style="display: none;" id="login-form">
+                <div class="title">
+                    <h2>Login</h2>
+                </div>
+                <form method="POST" action="#" id="login">
+                    <div class="input-container">
+                        <div class="input-group">
+                            <label for="user">Usuário</label>
+                            <input type="text" name="username" id="user" placeholder="Digite seu usuário" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="pass">Senha</label>
+                            <input type="password" name="password" id="pass" placeholder="Digite sua senha" required>
+                        </div>
+                    </div>
+                    <div class="form-links">
+                        <a href="#">Esqueceu sua senha?</a>
+                        <a href="http://127.0.0.1:5000/">Não tem uma conta? Cadastre-se</a>
+                    </div>
+                    <div class="submit-btn-form">
+                        <button type="submit">ACESSE</button>
+                    </div>
+                </form>
+                <div class="footer-card"></div>
+            </div>
+        </div>
+    </div>
+</main>
+<script>
+
+
+document.getElementById("aluno").addEventListener("click", function() {
+    document.getElementById("login-form").style.display = "block";
+    document.getElementById("h2").style.display ="block"
+    // Oculta os botões após serem clicados
+    document.querySelector(".user-selection").style.display = "none";
+    // Adiciona lógica específica para login de aluno
+    document.getElementById("login").addEventListener("submit", function(event) {
+        event.preventDefault();
+        // Aqui você pode adicionar lógica para processar o formulário de login de aluno
+        window.location.href = "loginnn_aluno.html";
+    });
+});
+
+document.getElementById("professor").addEventListener("click", function() {
+    document.getElementById("login-form").style.display = "block";
+    // Oculta os botões após serem clicados
+    document.querySelector(".user-selection").style.display = "none";
+    // Adiciona lógica específica para login de professor
+    document.getElementById("login").addEventListener("submit", function(event) {
+        event.preventDefault();
+        // Aqui você pode adicionar lógica para processar o formulário de login de professor
+        window.location.href = "prof.html";
+    });
+});
+
+
+
+   
+
+
+
+
+
+
+
+    document.getElementById("aluno").addEventListener("click", function() {
+        document.getElementById("login-form").style.display = "block";
+        // Aqui você pode definir qualquer ação específica para o tipo de usuário "aluno"
+    });
+
+    document.getElementById("professor").addEventListener("click", function() {
+        document.getElementById("login-form").style.display = "block";
+        // Aqui você pode definir qualquer ação específica para o tipo de usuário "professor"
+    });
+
+    document.getElementById("login").addEventListener("submit", function(event) {
+        event.preventDefault();
+        // Aqui você pode adicionar lógica para processar o formulário de login
+        window.location.href = "alu.html";
+    });
+</script>
+</body>
+</html>

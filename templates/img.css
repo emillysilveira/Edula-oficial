@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Montserrat+Alternates:wght@100;400&family=Montserrat:wght@200;300;500;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Source+Sans+Pro:wght@200&display=swap');
+
+* {
+     font-family: 'Open Sans', sans-serif;
+     margin: 0;
+     padding: 0;
+}
+
+body {
+     width: 100%;
+     height: 100vh;
+     font-size: 1rem;
+     color: #fff;
+     background-color: #0e0d21;
+}
+
+main { 
+     width: 100%;
+     height: 100%;
+     max-width: 1600px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 10%;
+     margin: 0 auto;
+}
+
+/* MAIN CONTENT */
+
+.main-container {
+     width: 85%;
+     height: auto;
+     margin: 0 auto;
+     padding: 1.3rem 0;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     border-radius: 20px;
+     box-sizing: border-box;
+     background-color: #1c1a3f;
+}
+
+/* TITLE AND IMAGE */
+.left-content, .right-content {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     padding: 0 2rem;
+}
+
+.main-container h1 {
+     max-width: 550px;
+     text-align: center;
+     color: #54d97a;
+     font-size: 2rem;
+}
+
+.vector-img {
+     width: 58%;
+     margin-top: .5rem;
+}
+
+.vector-img img {
+     width: 100%;
+}
+
+/* CARD AREA */
+
+.card-color {
+     background-color: #211f48;
+     border-radius: 20px;
+     box-shadow: 2px 2px 6px #00000047;
+}
+
+.card {
+     width: 400px;
+     height: 100%;
+     max-width: 550px;
+     max-height: 500px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     padding: 2rem 1.3rem;
+     box-sizing: border-box;
+}
+
+.title {
+     margin-bottom: 1.5rem;
+}
+
+.title h2 {
+     color: #54d97a;
+     text-align: center;
+     font-size: 2rem;
+     font-weight: 800;
+     text-transform: uppercase;
+}
+
+form {
+     display: flex;
+     flex-direction: column;
+     outline: none;
+     padding: 1rem 1.5rem;
+     box-sizing: border-box;
+}
+
+.input-group label {
+     font-size: 0.9rem;
+     font-weight: 600;
+     text-transform: uppercase;  
+}
+
+.input-group {
+     margin-bottom: .9rem;
+}
+
+form .input-group input {
+     color: #c9c9c9;
+     width: 100%;
+     font-size: .9rem;
+     padding: .5rem;
+     margin-top: .3rem;
+     height: 30px;
+     background-color: #151432;
+     box-sizing: border-box;
+     outline: none;
+     border: none;
+     border-radius: 5px;
+}
+
+.submit-btn-form {
+     display: flex;
+     justify-content: center;
+     margin-top: 1.5rem;
+}
+
+.submit-btn-form button {
+     width: 100%;
+     font-size: 1.1rem;
+     color: #d6d6d6;
+     background-color: #3ca159;
+     font-weight: 700;
+     text-transform: uppercase;
+     padding: .8rem 2rem;
+     border-radius: 5px;
+     border: none;
+     cursor: pointer;
+}
+
+
+form button:disabled {
+     cursor: not-allowed;
+}
+
+.form-links {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     gap: .3rem;
+}
+
+.form-links a {
+     width: fit-content;
+     font-size: .9rem;
+     color: #4845a0;
+     text-decoration: none;
+     transition: .3s;
+}
+
+.form-links a:hover, .footer-card span a:hover {
+     color: #54d97a;
+}
+
+.footer-card {
+     font-size: 0.7rem;
+     text-align: center;
+     margin-top: 1.5rem;
+}
+
+.footer-card span a {
+     font-size: 0.7rem;
+     text-decoration: underline;
+     color: #3ca159;
+     transition: .3s;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 1090px) {
+     body {
+          padding: 1.5rem 0;
+          min-height: 615px;
+     }
+     .main-container {
+          flex-direction: column;
+     }
+     .left-content {
+          margin-bottom: 1.5rem;
+     }
+     .left-content figure {
+          display: none;
+     }
+     .right-content {
+          width: 100%;
+     }
+     .card {
+          width: 95%;
+          margin: 0 auto;
+     }
+}
+
+@media (max-width: 680px) {
+     .left-content h1 {
+          font-size: 1.7rem;
+     }
+     .card h3 {
+          font-size: 1.8rem;
+     }
+}
+
+@media (max-width: 550px) {
+     .right-content {
+          padding: 0;
+     }
+     .card {
+          width: 90%;
+     }
+}
+
+@media (max-width: 475px) {
+     body {
+          padding: 0;
+     }
+     .left-content h1 {
+          font-size: 1.3rem;
+     }
+     .title h2 {
+          font-size: 1.7rem;
+     }
+     form {
+          padding: 0;
+     }
+     .submit-btn-form button {
+          font-size: 1rem;
+     }
+}

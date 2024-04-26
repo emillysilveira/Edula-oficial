@@ -1,0 +1,51 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA Educacional</title>
+</head>
+<body>
+    <h1>Bem-vindo(a) à IA Educacional</h1>
+    <form id="disciplinaForm">
+        <label for="nome">Qual é o seu nome?</label><br>
+        <input type="text" id="nome" name="nome"><br><br>
+
+        <label for="disciplina">Escolha a disciplina em que você tem mais dificuldade:</label><br>
+        <select id="disciplina" name="disciplina">
+            <option value="1">Português</option>
+            <option value="2">Matemática</option>
+            <option value="3">Ciências</option>
+            <option value="4">Biologia</option>
+        </select><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <div id="respostas">
+        <!-- Aqui serão exibidas as respostas da IA -->
+    </div>
+
+    <script>
+        document.getElementById("disciplinaForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var nome = document.getElementById("nome").value;
+            var disciplina = document.getElementById("disciplina").value;
+            
+            fetch('/pergunta_dificuldade', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ nome: nome, disciplina: disciplina })
+            })
+            .then(response => response.json())
+            .then(data => {
+                var respostasDiv = document.getElementById("respostas");
+                respostasDiv.innerHTML = "<h3>Respostas:</h3>";
+                data.respostas.forEach(resposta => {
+                    respostasDiv.innerHTML += "<p>" + resposta + "</p>";
+                });
+            });
+        });
+    </script>
+</body>
+</html>

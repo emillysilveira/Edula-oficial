@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário</title>
+    <style>
+
+        body{
+            background: #000;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        form div {
+            margin-bottom: 15px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        form input[type="text"],
+        form input[type="number"],
+        form textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        form button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #00ff73;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #04a748;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Questionário</h1>
+        <form action="/processar_questionario" method="POST">
+            <div>
+                <label for="nome">Qual é o seu nome?</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <!-- Outras perguntas aqui -->
+
+
+            <title>Questionário</title>
+        </head>
+        <body>
+            <h1>Questionário</h1>
+            <form action="/processar_questionario" method="POST">
+                <div>
+                    <label for="nome">Qual é o seu nome?</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div>
+                    <label for="idade">Qual é a sua idade?</label>
+                    <input type="number" id="idade" name="idade" required>
+                </div>
+                <div>
+                    <label for="serie">Qual é a sua série/ano atual na escola?</label>
+                    <input type="text" id="serie" name="serie" required>
+                </div>
+                <div>
+                    <label for="preferidas">Quais são as suas matérias preferidas na escola? Por quê?</label>
+                    <textarea id="preferidas" name="preferidas" required></textarea>
+                </div>
+                <div>
+                    <label for="desafiadoras">Quais são as matérias que você acha mais desafiadoras? Por quê?</label>
+                    <textarea id="desafiadoras" name="desafiadoras" required></textarea>
+                </div>
+                <div>
+                    <label for="estudar">Como você prefere estudar (sozinho, em grupo, com vídeos, lendo, etc.)?</label>
+                    <textarea id="estudar" name="estudar" required></textarea>
+                </div>
+                <div>
+                    <label for="tempo_estudo">Quanto tempo você normalmente passa estudando fora da escola?</label>
+                    <input type="text" id="tempo_estudo" name="tempo_estudo" required>
+                </div>
+                <div>
+                    <label for="objetivo">Você tem algum objetivo específico de aprendizado que gostaria de alcançar este ano?</label>
+                    <textarea id="objetivo" name="objetivo" required></textarea>
+                </div>
+                <div>
+                    <label for="melhorar">Existe algo que você acha que poderia melhorar na sua maneira de estudar?</label>
+                    <textarea id="melhorar" name="melhorar" required></textarea>
+                </div>
+                <div>
+                  
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </body>
+        </html>
+          
+        </form>
+    </div>
+</body>
+</html>

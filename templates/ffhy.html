@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+        /* Seu estilo CSS aqui */
+        body{
+            background-image: url('https://imgur.com/P6Fkzdy.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: rgb(20, 202, 81);
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro</h1>
+        <form action="/" method="POST" onsubmit="return onSubmit()">
+            <label for="tipo">Escolha o tipo de cadastro:</label><br>
+            <select id="tipo" name="tipo">
+                <option value="professor">Professor</option>
+                <option value="aluno">Aluno</option>
+            </select><br><br>
+            <div id="professor" style="display:none;">
+                <h2>Cadastrar Professor</h2>
+                <label for="nome_professor">Nome:</label><br>
+                <input type="text" id="nome_professor" name="nome_professor"><br>
+                <label for="email_professor">Email:</label><br>
+                <input type="text" id="email_professor" name="email_professor"><br>
+                <label for="disciplina">Disciplina:</label><br>
+                <input type="text" id="disciplina" name="disciplina"><br>
+            </div>
+            <div id="aluno" style="display:none;">
+                <h2>Cadastrar Aluno</h2>
+                <label for="nome_aluno">Nome:</label><br>
+                <input type="text" id="nome_aluno" name="nome_aluno"><br>
+                <label for="email_aluno">Email:</label><br>
+                <input type="text" id="email_aluno" name="email_aluno"><br>
+                <label for="curso">Curso:</label><br>
+                <input type="text" id="curso" name="curso"><br>
+            </div>
+            <button type="button" onclick="mostrarFormulario()">Continuar</button>
+            <button type="submit" id="submit_button" style="display: none;">Cadastrar</button>
+        </form>
+    </div>
+
+    <script>
+        function mostrarFormulario() {
+            var tipoSelecionado = document.getElementById("tipo").value;
+            if (tipoSelecionado === "professor") {
+                document.getElementById("professor").style.display = "block";
+                document.getElementById("aluno").style.display = "none";
+            } else if (tipoSelecionado === "aluno") {
+                document.getElementById("professor").style.display = "none";
+                document.getElementById("aluno").style.display = "block";
+            }
+            document.getElementById("submit_button").style.display = "block";
+        }
+
+        function onSubmit() {
+            var tipoSelecionado = document.getElementById("tipo").value;
+            var nome = document.getElementById("nome_" + tipoSelecionado).value;
+            var email = document.getElementById("email_" + tipoSelecionado).value;
+            var disciplinaCurso = document.getElementById(tipoSelecionado).querySelector("input[type='text']").value;
+
+            // Aqui você pode enviar os dados para o servidor
+            // Por exemplo, usando AJAX para enviar um pedido POST
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/", true);
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        alert("Cadastro realizado com sucesso!");
+                        window.location.href = "nova_pagina.html"; // Redireciona para a página após o cadastro
+                    } else {
+                        alert("Erro ao cadastrar. Tente novamente.");
+                    }
+                }
+            };
+            var data = JSON.stringify({
+                tipo: tipoSelecionado,
+                nome: nome,
+                email: email,
+                disciplina_curso: disciplinaCurso
+            });
+            xhr.send(data);
+
+            return true; // Isso impede o envio padrão do formulário
+        }
+    </script>
+
+</body>
+</html>

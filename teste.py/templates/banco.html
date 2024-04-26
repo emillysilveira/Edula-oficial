@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/cadasro_styles.css')}}">
+     <link rel="icon" href="https://th.bing.com/th/id/R.04e33237cd1126fb72a0e03acedb80fa?rik=dOuMfI7uH1UPsw&riu=http%3a%2f%2fedu.szf.at%2fimages%2fedu4me.png&ehk=rUkmZNqWfePUDO1MfO%2bPEpzOb4ky6xB5jQnhtGNaSTo%3d&risl=&pid=ImgRaw&r=0">
+     <title>Cadastro</title>
+</head>
+<body>
+     <main>
+          <div class="main-container">
+               <div class="left-content">
+                    <div class="title">
+                         <h1>Cadastre-se em nossa plataforma e venha desfrutar do melhor!</h1>
+                    </div>
+                    <figure class="vector-img">
+                         <img src="hjdfh.svg" alt="Image Vetor">
+                    </figure>
+               </div>
+
+               <div class="right-content">
+                    <div class="card">
+                         <form method="post" action="/" class="card-color">
+                             
+                              <div class="duble-input-container">
+                                   <div class="input-group">
+                                        <label for="nome">Nome</label>
+                                        <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+                                   </div>
+                                   <div class="input-group">
+                                        <label for="sobrenome">Sobrenome</label>
+                                        <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite seu sobrenome" required>
+                                   </div>
+                                  
+                                  
+                                   <div class="input-group">
+                                        <label for="email">E-mail</label>
+                                        <input type="email" name="email" id="email" placeholder="exemplo@provedor.com" required>
+                                   </div>
+
+                                   
+
+                                   <div class="input-group">
+                                        <label for="senha">Crie uma senha</label>
+                                        <input type="password" name="senha" id="senha" placeholder="Crie uma senha" required>
+                                   </div>
+                                   <div class="input-group">
+                                        <label for="repetir_senha">Repetir senha</label>
+                                        <input type="password" name="repetir_senha" id="repetir_senha" placeholder="Repetir senha" required>
+                                   </div>
+
+                              </div>
+                              <div class="input-container">
+                                <div class="id-text">
+                                     <span>Você deseja receber e-mail?</span>
+                                </div>
+                                <div class="align-input">
+                                    <label for="receber-email-sim">Sim</label>
+                                    <input type="radio" name="receber_email" id="receber-email-sim" value="true" required>
+                               </div>
+                               <div class="align-input">
+                                    <label for="receber-email-nao">Não</label>
+                                    <input type="radio" name="receber_email" id="receber-email-nao" value="false" required>
+                               </div>
+                                       
+                              </div>
+                              <div class="form-links">
+                                   <a href="/Edula.com/Página inicial projeto EDULA/loginnn.html">Já tenho uma conta</a>
+                                  
+                               </div>
+                              <div class="submit-btn-form">
+                                   <button type="submit">Cadastre-se</button>
+                                   
+                              </div>
+                              
+                         </form>
+                    </div>
+               </div>
+          </div>
+     </main>
+     <script>
+  document.getElementById("conttt").addEventListener
+               ("click",function(){
+                    window.location.href="loginnn.html";
+               });
+               
+
+     </script>
+     
+</body>
+</html>
